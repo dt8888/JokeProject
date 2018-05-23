@@ -1,0 +1,3 @@
+<view class='piture'>
+ <image class="img" src="{{pictureStr}}" mode="widthFix"></image>
+</view>

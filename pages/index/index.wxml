@@ -1,0 +1,25 @@
+<!--index.wxml-->
+
+<scroll-view  scroll-y="true" >
+    <view class="board">
+        <image src="{{board}}" />
+    </view>
+
+    <view class="songlist">
+        <block wx:for="{{songlist}}"  wx:key="song_id">
+            <view class="songitem">
+                <navigator url="/pages/play/play?songid={{index}}" 
+            class="song-play"><image src="/Images/play.png" /></navigator>
+                <navigator url="/pages/play/play?songid={{index}}" 
+                           class="song-detail">
+                    <view class="song-title">{{item.song_name}}</view>
+                    <view class="song-subtitle">{{item.author_name}} - 
+                              {{item.seconds}}</view>
+                </navigator>
+            </view>
+        </block>
+    </view>
+    <loading hidden="{{!loading}}">
+    正在加载音乐……
+  </loading>
+</scroll-view>

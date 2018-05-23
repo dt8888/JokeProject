@@ -1,0 +1,41 @@
+{
+  "pages":[
+     "pages/index/index",
+     "pages/allJoke/allJoke",
+     "pages/logs/logs",
+     "pages/play/play",
+      "pages/detailInfo/detailInfo",
+      "pages/lookBigPicture/lookBigPicture"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#d81e06",
+    "navigationBarTitleText": "音乐",
+    "navigationBarTextStyle":"#ffffff"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "backgroundColor": "#ffffff",
+    "selectedColor": "#d81e06",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "微音乐",
+        "iconPath": "/Images/music_tabBar.png",
+        "selectedIconPath": "/Images/redMusic_tabBar.png"
+      },
+      {
+        "pagePath": "pages/allJoke/allJoke",
+        "iconPath": "/Images/joke_tabBar.png",
+        "selectedIconPath": "/Images/redJoke_tabBar.png",
+        "text": "笑话大全"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "iconPath": "/Images/info_tabBar.png",
+        "selectedIconPath": "/Images/redInfo_tabBar.png",
+        "text": "健康资讯"
+      }
+    ]
+  }
+}

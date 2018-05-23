@@ -1,0 +1,20 @@
+<!--logs.wxml-->
+<view class='container'>
+  <scroll-view scroll-y="true" class='bgView' >
+       <!-- 图片-->
+       <view class="picture">
+        <image class='show' src="{{picture}}"/>
+    </view>
+     
+     <view wx:for="{{contentlist}}" wx:for-index="idx"               class="item-container" data-detail="{{item.id}}" id="{{idx}}"  >
+     <navigator url="/pages/detailInfo/detailInfo?infoId={{item.id}}" >
+        <image mode="aspectFill" src="{{item.img}}" class="cover"></image>
+        <view class='title' >{{item.title}}</view>
+        <text class='time' >{{item.time}}</text>
+        <view>
+         <text class='detail' >{{item.author}}</text>
+        </view> 
+     </navigator>
+  </view>
+  </scroll-view>
+</view>

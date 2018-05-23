@@ -1,0 +1,28 @@
+<view class="navbar">
+  <text class="item {{currentTab==index ? 'active' : ''}}" wx:for="{{navbar}}" wx:key="{{index}}" data-index="{{index}}" bindtap="onNavbarTap">{{item}}</text>
+</view>
+
+<!--文本笑话-->
+<view class="recommend" hidden="{{currentTab!==0}}">
+<view class="item" wx:for="{{textJokes}}" wx:key="{{item.id}}" data-id="{{item.id}}" >
+    <view class="allInfo">
+      <text class="count">{{item.title}}</text>
+      <view class="title">{{item.text}}</view>
+    </view>
+  </view>
+</view>
+
+<!-- 图片笑话 -->
+<view class="topList" hidden="{{currentTab!==1}}">
+  <view class="item" wx:for="{{pictureJokes}}" wx:key="{{item.id}}" data-id="{{item.id}}" >
+    <view class="media">
+      <text class="count">{{item.title}}</text>
+    
+      <view class='picture' style='width: {{imagewidth}}px' bindtap="onToplistTap" data-index="{{index}}" >
+        <image class="img" src="{{item.img}}" mode="aspectFill"></image>
+      </view>
+     
+    </view>
+  </view>
+</view>
+

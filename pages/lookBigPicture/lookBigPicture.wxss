@@ -1,0 +1,11 @@
+page {
+    height: 100%;
+    width: 100%;
+}
+.piture{
+  background: gainsboro;
+  width: 100%;
+}
+.piture .img{
+   width: 100%;
+}
